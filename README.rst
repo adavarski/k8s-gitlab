@@ -12,7 +12,7 @@ Perform the deployment from ``.gitlab-ci.yml``:
 
 .. code-block:: yaml
 
-    image: edoburu/gitlab-kubernetes-client
+    image: davarski/k8s-gitlab
 
     stages:
     - build
@@ -103,7 +103,7 @@ There is a helper script to do everything for you:
 
 .. code-block:: bash
 
-    docker run --rm -v "$HOME/.kube:/root/.kube" edoburu/gitlab-kubernetes-client create-namespace MY_NAMESPACE
+    docker run --rm -v "$HOME/.kube:/root/.kube" davarski/k8s-gitlab create-namespace MY_NAMESPACE
 
 This installs Tiller in a single namespace, with a ``tiller`` and ``deploy`` user.
 At the end, it prints all settings needed for
@@ -153,7 +153,7 @@ The ``create-namespace`` already gave all values for it, but you can request the
 
 .. code-block:: bash
 
-    docker run --rm -v "$HOME/.kube:/root/.kube" edoburu/gitlab-kubernetes-client get-gitlab-settings deploy namespace=NAMESPACE
+    docker run --rm -v "$HOME/.kube:/root/.kube" davarski/k8s-gitlab get-gitlab-settings deploy namespace=NAMESPACE
 
 Open the `GitLab Kubernetes integration <https://docs.gitlab.com/ce/user/project/integrations/kubernetes.html>`_
 in your project to enter the displayed values
