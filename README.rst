@@ -1,4 +1,4 @@
-docker-kubernetes-client
+docker image for CI/CD pipelines (GitLab-CI) with K8s Helm package manager and some scripts
 ========================
 
 This is a small image that allows to run ``git``, ``docker``, ``kubectl`` and ``helm``.
