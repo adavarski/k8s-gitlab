@@ -1,7 +1,7 @@
 # Based on https://github.com/linkyard/docker-helm/blob/master/Dockerfile
 # and https://github.com/lachie83/k8s-helm/blob/v2.7.2/Dockerfile
 FROM alpine:3.8 as build
-MAINTAINER Anastas Davarski
+MAINTAINER A.Davarski
 
 ARG HELM_VERSION=v2.11.0
 ARG KUBE_VERSION=v1.12.2
